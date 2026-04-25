@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "playcanvas": "^2.16.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "ammojs-typed": "^1.0.6",
+    "live-server": "^1.2.2"
+  },
+  "scripts": {
+    "build": "vite build && npm run copy-assets",
+    "preview": "vite preview",
+    "copy-assets": "cp xr-forge*.png dist/assets/ && cp vr-glasses.glb dist/assets/ && cp -r scenes/*.sog dist/"
+  }
+}
