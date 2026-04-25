@@ -5,7 +5,7 @@
 RewriteEngine On
 
 # --- ONLY apply bypass for NON-logged-in users ---
-RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
+#RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
 
 # Map /assets → /worldgen/assets
 RewriteRule ^assets/(.*)$ /worldgen/assets/$1 [L]
@@ -25,7 +25,7 @@ RewriteBase /
 
 # Exclude assets + worldgen + logged-in users
 RewriteCond %{REQUEST_URI} !^/(assets|worldgen)/
-RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
+#RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
 
 RewriteCond %{HTTPS} on
 RewriteCond %{HTTP_HOST} ^xrforge.dev
